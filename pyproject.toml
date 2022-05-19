@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "findev"
+version = "0.1.0"
+description = ""
+authors = ["WayupKG <adikgk232323@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+environs = "^9.5.0"
+fastapi = "^0.78.0"
+hypercorn = "^0.13.2"
+tortoise-orm = {extras = ["asyncpg"], version = "^0.19.0"}
+aerich = "^0.6.3"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.aerich]
+tortoise_orm = "settings.DATABASE_CONFIG"
+location = "database/migrations"
+src_folder = "./."
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
